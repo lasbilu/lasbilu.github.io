@@ -1,0 +1,321 @@
+
+:root {
+  --bg-1: #12051f;
+  --bg-2: #25063d;
+  --bg-3: #3b0a60;
+  --pink: #ff4fd8;
+  --violet: #a855f7;
+  --blue: #5b8cff;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,.72);
+  --card: rgba(33, 12, 55, .72);
+  --card-hover: rgba(53, 20, 88, .88);
+  --border: rgba(192, 132, 252, .42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg-1);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 79, 216, .18), transparent 28rem),
+    radial-gradient(circle at 85% 18%, rgba(91, 140, 255, .16), transparent 32rem),
+    linear-gradient(180deg, #10031a 0%, #24053a 45%, #13031f 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(100%, 520px);
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: rgba(7, 2, 13, .26);
+  box-shadow: 0 0 70px rgba(0,0,0,.35);
+}
+
+/* HERO ---------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(4,0,10,.02) 0%,
+      rgba(4,0,10,.03) 56%,
+      rgba(16,3,28,.28) 74%,
+      rgba(18,5,31,.96) 100%),
+    url("assets/hero.png") center 18% / cover no-repeat;
+  transform: scale(1.01);
+}
+
+.hero-fade {
+  position: absolute;
+  inset: auto 0 0;
+  height: 235px;
+  background: linear-gradient(to bottom, transparent, rgba(18,5,31,.96) 72%, #12051f 100%);
+}
+
+.profile {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 24px 34px;
+  text-align: center;
+}
+
+/*
+  Wichtig: Das Profilbild ist absichtlich KLEINER.
+  Es wird NICHT ersetzt und NICHT künstlich verändert.
+*/
+.profile-image {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  object-position: center 31%;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.86);
+  outline: 4px solid rgba(168,85,247,.35);
+  box-shadow:
+    0 0 0 8px rgba(255,79,216,.08),
+    0 0 30px rgba(168,85,247,.62),
+    0 14px 38px rgba(0,0,0,.45);
+}
+
+h1 {
+  margin: 18px 0 4px;
+  font-size: clamp(3rem, 12vw, 4.35rem);
+  line-height: .95;
+  font-weight: 800;
+  letter-spacing: -.035em;
+  background: linear-gradient(90deg, #fff 0%, #d8b4fe 55%, #ff4fd8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 18px rgba(168,85,247,.25));
+}
+
+.tagline {
+  margin: 12px 0 0;
+  text-transform: uppercase;
+  letter-spacing: .24em;
+  font-size: .76rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.88);
+}
+
+.intro {
+  max-width: 360px;
+  margin: 11px auto 0;
+  line-height: 1.48;
+  font-size: .96rem;
+  color: var(--muted);
+}
+
+.quick-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.quick-socials a {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.34rem;
+  background: rgba(21,5,35,.72);
+  border: 1px solid rgba(192,132,252,.35);
+  box-shadow: 0 7px 22px rgba(0,0,0,.26);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.quick-socials a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,79,216,.85);
+  background: rgba(55,13,86,.88);
+}
+
+/* LINKS --------------------------------------------------- */
+
+.links {
+  display: grid;
+  gap: 22px; /* bewusst etwas mehr Abstand zwischen den Buttons */
+  padding: 22px 18px 48px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(121,40,202,.18), transparent 22rem),
+    linear-gradient(180deg, #12051f 0%, #1b062d 50%, #100319 100%);
+}
+
+.link-card {
+  min-height: 84px;
+  display: grid;
+  grid-template-columns: 58px minmax(0,1fr) 22px;
+  align-items: center;
+  gap: 13px;
+  padding: 11px 16px 11px 11px;
+  border-radius: 25px;
+  text-decoration: none;
+
+  background:
+    linear-gradient(110deg, rgba(70,20,110,.53), rgba(18,7,32,.78));
+  border: 1px solid var(--border);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.30),
+    inset 0 1px 0 rgba(255,255,255,.07);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,79,216,.82);
+  background:
+    linear-gradient(110deg, rgba(91,28,143,.66), rgba(24,8,41,.88));
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.36),
+    0 0 22px rgba(168,85,247,.18);
+}
+
+.link-card:active {
+  transform: scale(.992);
+}
+
+.platform-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  font-size: 1.55rem;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.platform-icon.twitch {
+  background: linear-gradient(145deg, #9146ff, #5e21c8);
+}
+
+.platform-icon.instagram {
+  background: linear-gradient(145deg, #ff7a00 0%, #ff2d95 45%, #7b2cff 100%);
+}
+
+.platform-icon.tiktok {
+  background: #090909;
+  text-shadow: -2px 0 #25f4ee, 2px 0 #fe2c55;
+}
+
+.platform-icon.discord {
+  background: linear-gradient(145deg, #7688ff, #5865f2);
+}
+
+.platform-icon.tinder {
+  background: linear-gradient(145deg, #ff5a6e, #fd267a);
+}
+
+.link-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.link-text strong {
+  font-size: 1.02rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.link-text small {
+  font-size: .80rem;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+/* Kein sichtbarer Roh-Link. Nur Name + Beschreibung. */
+.chevron {
+  color: rgba(255,255,255,.72);
+  font-size: .92rem;
+}
+
+footer {
+  padding: 28px 20px 34px;
+  text-align: center;
+  color: rgba(255,255,255,.44);
+  font-size: .76rem;
+  background: #0c0213;
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 28px 0;
+  }
+
+  .page {
+    border-radius: 34px;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+
+  .hero {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 380px) {
+  .profile-image {
+    width: 98px;
+    height: 98px;
+  }
+
+  .quick-socials {
+    gap: 10px;
+  }
+
+  .quick-socials a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .links {
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
