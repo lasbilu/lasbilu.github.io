@@ -1,4 +1,3 @@
-
 :root {
   --bg-1: #12051f;
   --bg-2: #25063d;
@@ -8,14 +7,10 @@
   --blue: #5b8cff;
   --text: #ffffff;
   --muted: rgba(255,255,255,.72);
-  --card: rgba(33, 12, 55, .72);
-  --card-hover: rgba(53, 20, 88, .88);
   --border: rgba(192, 132, 252, .42);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   min-height: 100%;
@@ -34,9 +29,7 @@ body {
     linear-gradient(180deg, #10031a 0%, #24053a 45%, #13031f 100%);
 }
 
-a {
-  color: inherit;
-}
+a { color: inherit; }
 
 .page {
   width: min(100%, 520px);
@@ -46,8 +39,6 @@ a {
   background: rgba(7, 2, 13, .26);
   box-shadow: 0 0 70px rgba(0,0,0,.35);
 }
-
-/* HERO ---------------------------------------------------- */
 
 .hero {
   position: relative;
@@ -85,10 +76,6 @@ a {
   text-align: center;
 }
 
-/*
-  Wichtig: Das Profilbild ist absichtlich KLEINER.
-  Es wird NICHT ersetzt und NICHT künstlich verändert.
-*/
 .profile-image {
   width: 112px;
   height: 112px;
@@ -162,11 +149,9 @@ h1 {
   background: rgba(55,13,86,.88);
 }
 
-/* LINKS --------------------------------------------------- */
-
 .links {
   display: grid;
-  gap: 22px; /* bewusst etwas mehr Abstand zwischen den Buttons */
+  gap: 22px;
   padding: 22px 18px 48px;
   background:
     radial-gradient(circle at 50% 0%, rgba(121,40,202,.18), transparent 22rem),
@@ -182,17 +167,13 @@ h1 {
   padding: 11px 16px 11px 11px;
   border-radius: 25px;
   text-decoration: none;
-
-  background:
-    linear-gradient(110deg, rgba(70,20,110,.53), rgba(18,7,32,.78));
+  background: linear-gradient(110deg, rgba(70,20,110,.53), rgba(18,7,32,.78));
   border: 1px solid var(--border);
   box-shadow:
     0 12px 30px rgba(0,0,0,.30),
     inset 0 1px 0 rgba(255,255,255,.07);
-
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-
   transition:
     transform .18s ease,
     border-color .18s ease,
@@ -203,16 +184,13 @@ h1 {
 .link-card:hover {
   transform: translateY(-3px);
   border-color: rgba(255,79,216,.82);
-  background:
-    linear-gradient(110deg, rgba(91,28,143,.66), rgba(24,8,41,.88));
+  background: linear-gradient(110deg, rgba(91,28,143,.66), rgba(24,8,41,.88));
   box-shadow:
     0 14px 34px rgba(0,0,0,.36),
     0 0 22px rgba(168,85,247,.18);
 }
 
-.link-card:active {
-  transform: scale(.992);
-}
+.link-card:active { transform: scale(.992); }
 
 .platform-icon {
   width: 54px;
@@ -225,26 +203,11 @@ h1 {
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
 }
 
-.platform-icon.twitch {
-  background: linear-gradient(145deg, #9146ff, #5e21c8);
-}
-
-.platform-icon.instagram {
-  background: linear-gradient(145deg, #ff7a00 0%, #ff2d95 45%, #7b2cff 100%);
-}
-
-.platform-icon.tiktok {
-  background: #090909;
-  text-shadow: -2px 0 #25f4ee, 2px 0 #fe2c55;
-}
-
-.platform-icon.discord {
-  background: linear-gradient(145deg, #7688ff, #5865f2);
-}
-
-.platform-icon.tinder {
-  background: linear-gradient(145deg, #ff5a6e, #fd267a);
-}
+.platform-icon.twitch { background: linear-gradient(145deg, #9146ff, #5e21c8); }
+.platform-icon.instagram { background: linear-gradient(145deg, #ff7a00 0%, #ff2d95 45%, #7b2cff 100%); }
+.platform-icon.tiktok { background: #090909; text-shadow: -2px 0 #25f4ee, 2px 0 #fe2c55; }
+.platform-icon.discord { background: linear-gradient(145deg, #7688ff, #5865f2); }
+.platform-icon.tinder { background: linear-gradient(145deg, #ff5a6e, #fd267a); }
 
 .link-text {
   min-width: 0;
@@ -265,7 +228,6 @@ h1 {
   line-height: 1.2;
 }
 
-/* Kein sichtbarer Roh-Link. Nur Name + Beschreibung. */
 .chevron {
   color: rgba(255,255,255,.72);
   font-size: .92rem;
@@ -280,42 +242,23 @@ footer {
 }
 
 @media (min-width: 700px) {
-  body {
-    padding: 28px 0;
-  }
+  body { padding: 28px 0; }
 
   .page {
     border-radius: 34px;
     border: 1px solid rgba(255,255,255,.08);
   }
 
-  .hero {
-    min-height: 700px;
-  }
+  .hero { min-height: 700px; }
 }
 
 @media (max-width: 380px) {
-  .profile-image {
-    width: 98px;
-    height: 98px;
-  }
-
-  .quick-socials {
-    gap: 10px;
-  }
-
-  .quick-socials a {
-    width: 42px;
-    height: 42px;
-  }
-
-  .links {
-    gap: 18px;
-  }
+  .profile-image { width: 98px; height: 98px; }
+  .quick-socials { gap: 10px; }
+  .quick-socials a { width: 42px; height: 42px; }
+  .links { gap: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-  }
+  * { transition: none !important; }
 }
