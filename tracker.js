@@ -7,7 +7,7 @@
      https://lasbilu-link-tracker.DEINNAME.workers.dev
 */
 
-const TRACKER_BASE_URL = "https://DEIN-WORKER.workers.dev";
+const TRACKER_BASE_URL = "https://lasbilu-link-tracker.l-voelker05.workers.dev";
 
 function trackLink(platform, source) {
   if (!TRACKER_BASE_URL || TRACKER_BASE_URL.includes("DEIN-WORKER")) {
