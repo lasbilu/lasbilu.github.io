@@ -208,6 +208,7 @@ h1 {
 .platform-icon.tiktok { background: #090909; text-shadow: -2px 0 #25f4ee, 2px 0 #fe2c55; }
 .platform-icon.discord { background: linear-gradient(145deg, #7688ff, #5865f2); }
 .platform-icon.tinder { background: linear-gradient(145deg, #ff5a6e, #fd267a); }
+.platform-icon.onlyfans { background: linear-gradient(145deg, #00aff0, #0077b6); }
 
 .link-text {
   min-width: 0;
